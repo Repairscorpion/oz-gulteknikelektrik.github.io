@@ -1,0 +1,118 @@
+:root {
+  --primary-color: #b30000;
+  --hover-color: #990000;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --white: #ffffff;
+  --light-grey: #e0e0e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--hover-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 2s ease-in;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--primary-color);
+}
+
+p {
+  margin-top: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+ul {
+  margin: 20px auto;
+  max-width: 500px;
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.contact-info {
+  margin-top: 30px;
+  background-color: #fff3f3;
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #222;
+  color: var(--white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Mobil uyumluluk */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 10px;
+  }
+}
